@@ -9,6 +9,14 @@ const e = exposes.presets;
 
 const definitions: DefinitionWithExtend[] = [
     {
+        zigbeeModel: ['GWA1502_BinaryInput230V'],
+        model: 'GWA1502_BinaryInput230V',
+        vendor: 'Gewiss',
+        description: 'Automatically generated definition',
+        extend: [deviceEndpoints({"endpoints":{"1":1,"2":2}}), identify(), occupancy(), commandsOnOff({"endpointNames":["1","2"]}), commandsLevelCtrl({"endpointNames":["1","2"]}), commandsWindowCovering({"endpointNames":["1","2"]})],
+        meta: {"multiEndpoint":true},
+    },    
+    {
         zigbeeModel: ['GWA1521_Actuator_1_CH_PF'],
         model: 'GWA1521',
         description: 'Switch actuator 1 channel with input',
